@@ -1,0 +1,32 @@
+#Word Counter & Analyzer — Takes a paragraph as input, counts words, finds longest word, counts vowels using string methods and loops.usinig variable,loops ,conditionals,strings in python
+# Word Counter & Analyzer
+
+paragraph = input("Enter a paragraph:\n")
+
+# Split paragraph into words
+words = paragraph.split()
+
+# Count words
+word_count = len(words)
+
+# Find longest word
+longest_word = ""
+
+for word in words:
+    if len(word) > len(longest_word):
+        longest_word = word
+
+# Count vowels
+vowels = "aeiouAEIOU"
+vowel_count = 0
+
+for char in paragraph:
+    if char in vowels:
+        vowel_count += 1
+
+# Display results
+print("\n--- Analysis Result ---")
+print("Total words:", word_count)
+print("Longest word:", longest_word)
+print("Length of longest word:", len(longest_word))
+print("Total vowels:", vowel_count)
